@@ -32,53 +32,6 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>M3U8 Checker</h1>
-    <form id="linkForm">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" required>
-      <label for="url">Enlace M3U8:</label>
-      <input type="text" id="url" required>
-      <button type="submit">Agregar Enlace</button>
-    </form>
-    <div>
-      <button id="startCheck">Iniciar Chequeo</button>
-      <button id="stopCheck">Detener Chequeo</button>
-    </div>
-  </div>
-
-  <script>
-    // Función para agregar un enlace
-    document.getElementById('linkForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const nombre = document.getElementById('nombre').value;
-      const url = document.getElementById('url').value;
-
-      const response = await fetch('/add-link', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ nombre, url })
-      });
-      
-      const data = await response.json();
-      alert(data.message);
-    });
-
-    // Función para iniciar el chequeo
-    document.getElementById('startCheck').addEventListener('click', async () => {
-      const response = await fetch('/start-check', { method: 'POST' });
-      const data = await response.json();
-      alert(data.message);
-    });
-
-    // Función para detener el chequeo
-    document.getElementById('stopCheck').addEventListener('click', async () => {
-      const response = await fetch('/stop-check', { method: 'POST' });
-      const data = await response.json();
-      alert(data.message);
-    });
-  </script>
+AL TOÑO LE GUSTA LA TULA
 </body>
 </html>
